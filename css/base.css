@@ -1,0 +1,9 @@
+#addInterview {
+  margin-top: -8px;
+}
+#answer {
+  height: 150px;
+  margin-top: 5px;
+  width: 100%;
+  resize: none;
+}

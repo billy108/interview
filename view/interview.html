@@ -1,0 +1,39 @@
+<!--路径导航-->
+<div>
+    <ol class="breadcrumb">
+        当前位置：
+        <li><a href="#start">首页</a></li>
+        <li>面试题</li>
+        <button id="addInterview" data-target="#addItem" data-toggle="collapse" type="button" class="btn btn-success pull-right">添加题目</button>
+    </ol>
+</div>
+<!--添加题目部分-->
+<div id="addItem" class="collapse">
+    <form action="">
+        <div class="form-group">
+            <label for="title" class="sr-only">问题</label>
+            <input id="title" type="text" class="form-control" placeholder="请输入题目..."/>
+            <label for="answer" class="sr-only">问题答案</label>
+            <textarea wrap="hard" name="answer" id="answer" placeholder="请输入答案...">
+            </textarea>
+        </div>
+
+    </form>
+</div>
+<!--interview页面主体-->
+<div class="panel-group">
+    <div ng-repeat="item in interviewList">
+        <div class="panel panel-default" data-target="#interview{{item.id}}" data-toggle="collapse">
+            <div class="panel-heading" role="tab">
+                <h3 class="panel-title">
+                    {{item.title}}
+                </h3>
+            </div>
+            <div id="interview{{item.id}}" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                    {{item.answer}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1 @@
+const URL_INTERVIEW = "./data/getInterview.php";
